@@ -90,7 +90,7 @@ echo "Installing OpenSSL ${OPENSSL_VERSION}" | topic
 # Use the cached tar file if we find it
 if [ ! -f ${CACHED_TAR} ]; then
   echo "Cached files not found - downloading and unpacking..." | indent
-  curl -s https://www.openssl.org/source/old/3.1/openssl-${OPENSSL_VERSION}.tar.gz | tar xzf - -C ${BUILD_DIR}
+  curl -sL https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz | tar xzf - -C ${BUILD_DIR}
 
   cd ${BUILD_DIR}/openssl-${OPENSSL_VERSION}
 
